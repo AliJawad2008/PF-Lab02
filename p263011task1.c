@@ -1,18 +1,20 @@
 #include <stdio.h>
-#include <conio.h>
-int main()
+int main(){
+int ball,runs,dotball=0,boundary=0,total=0;
+for ( ball=1;ball<=6;ball++)
 {
-int Year ;
-Year = 2026;
-char Section='A';
-float Marks=50.5;
-double Tutionfees=268000;
-printf("\t\tFAST STUDENT PROFILE ID\n");
-printf("Year: %d\n",Year);
-printf("Section: %c\n",Section);
-printf("Marks: %.1f\n",Marks);
-printf("Tutionfees: %.0lf\n",Tutionfees);
-printf("Motto:One day or Day one");
+printf("Enter runs on each ball from 0 to 6 : ");
+scanf("%d",&runs);
+if (runs < 0 || runs > 6){
+printf("Invalid runs ");
 return 0;
-
+}
+if(runs==4 || runs ==6)
+boundary++;
+if (runs ==0)
+dotball++;
+total = runs + total;
+}
+printf("Total runs are %d\nBoundaries hit are %d\nDot balls in this over are %d\n",total,boundary,dotball);
+return 0;
 }
